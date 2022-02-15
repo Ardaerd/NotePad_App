@@ -6,6 +6,10 @@
 #include <QMessageBox>
 #include <QFontDialog>
 #include <QFont>
+#include <QColor>
+#include <QColorDialog>
+#include <QPrinter>
+#include <QPrintDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -126,5 +130,47 @@ void MainWindow::on_actionFont_triggered()
         ui->textEdit->setFont(font);
     else
         return;
+}
+
+
+void MainWindow::on_actionText_Color_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white,this,"Chose Color");
+
+    if (color.isValid())
+        ui->textEdit->setTextColor(color);
+    else
+        return;
+}
+
+
+void MainWindow::on_actionBackground_color_of_the_Text_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white,this,"Chose Color");
+
+    if (color.isValid())
+        ui->textEdit->setTextBackgroundColor(color);
+}
+
+
+void MainWindow::on_actionBackground_Color_of_the_Plain_Text_triggered()
+{
+    QColor color = QColorDialog::getColor(Qt::white,this,"Chose Color");
+
+    if (color.isValid())
+        ui->textEdit->setPalette(QPalette(color));
+}
+
+
+void MainWindow::on_actionPrint_triggered()
+{
+    QPrinter printer;
+    printer.setPrinterName("Desired printer name");
+    QPrintDialog dialog(&printer,this);
+
+    if (dialog.exec() == QDialog::Rejected)
+        return;
+
+    ui->textEdit->print(&printer);
 }
 

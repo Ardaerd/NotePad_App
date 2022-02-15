@@ -38,6 +38,8 @@
     <addaction name="separator"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
@@ -51,6 +53,9 @@
     <addaction name="actionUndo"/>
     <addaction name="separator"/>
     <addaction name="actionFont"/>
+    <addaction name="actionText_Color"/>
+    <addaction name="actionBackground_color_of_the_Text"/>
+    <addaction name="actionBackground_Color_of_the_Plain_Text"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -78,6 +83,7 @@
    <addaction name="separator"/>
    <addaction name="actionSave"/>
    <addaction name="actionSave_as"/>
+   <addaction name="actionPrint"/>
    <addaction name="separator"/>
    <addaction name="actionCut"/>
    <addaction name="actionCopy"/>
@@ -87,6 +93,9 @@
    <addaction name="actionUndo"/>
    <addaction name="separator"/>
    <addaction name="actionFont"/>
+   <addaction name="actionText_Color"/>
+   <addaction name="actionBackground_color_of_the_Text"/>
+   <addaction name="actionBackground_Color_of_the_Plain_Text"/>
    <addaction name="separator"/>
    <addaction name="actionInformation"/>
   </widget>
@@ -187,6 +196,42 @@
    </property>
    <property name="text">
     <string>Font</string>
+   </property>
+  </action>
+  <action name="actionText_Color">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Image/img/font_Color.png</normaloff>:/Image/img/font_Color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Text Color</string>
+   </property>
+  </action>
+  <action name="actionBackground_color_of_the_Text">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Image/img/theme.png</normaloff>:/Image/img/theme.png</iconset>
+   </property>
+   <property name="text">
+    <string>Background color of the Text</string>
+   </property>
+  </action>
+  <action name="actionBackground_Color_of_the_Plain_Text">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Image/img/color.png</normaloff>:/Image/img/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Background Color of the Plain Text</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Image/img/printer.png</normaloff>:/Image/img/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
    </property>
   </action>
  </widget>

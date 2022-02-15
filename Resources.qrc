@@ -13,5 +13,9 @@
         <file>img/information.png</file>
         <file>img/ss.png</file>
         <file>img/text-font.png</file>
+        <file>img/color.png</file>
+        <file>img/font_Color.png</file>
+        <file>img/theme.png</file>
+        <file>img/printer.png</file>
     </qresource>
 </RCC>
